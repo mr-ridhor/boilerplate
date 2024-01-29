@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>{{subject}}</title>
+    <style>
+      /* Global Styles */
+      body {
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        line-height: 1.4;
+        background-color: #f5f8fa;
+      }
+
+      .container {
+        max-width: 600px;
+        margin: 0 auto;
+        background-color: #fff;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+      }
+
+      /* Header Styles */
+      .header {
+        background-color: #f3f7f9;
+        padding: 20px;
+        text-align: center;
+      }
+
+      .header img {
+        max-width: 150px;
+        height: auto;
+      }
+
+      /* Content Styles */
+      .content {
+        padding: 30px;
+      }
+
+      .content h1 {
+        color: #24292e;
+        font-size: 24px;
+        margin-bottom: 20px;
+      }
+
+      .content p {
+        color: #657786;
+        font-size: 16px;
+        line-height: 1.5;
+      }
+
+      /* Button Styles */
+      .button {
+        display: inline-block;
+        margin-top: 20px;
+        padding: 12px 24px;
+        font-size: 16px;
+        text-align: center;
+        text-decoration: none;
+        color: #fff;
+        background-color: #007bff;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+
+      /* Footer Styles */
+      .footer {
+        background-color: #f3f7f9;
+        padding: 15px;
+        text-align: center;
+        font-size: 14px;
+        color: #657786;
+      }
+      /* for the verification code */
+      .code-container {
+        background: #f3f7f9;
+        height: auto;
+        padding: 0.9;
+        text-align: center;
+      }
+      .code {
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header"><img src="{{ logo }}" alt="Logo" /></div>
+
+      <div class="content">
+        <h2>Dear, {{data.first_name}} {{data.last_name}}!</h2>
+        <p>Please use the code below to verify your account on untitled ui website</p>
+        <div class="code-container">
+          <p class="code">{{data.token}}</p>
+        </div>
+        <div>
+          <p>Regards,</p>
+          <p>Untitled UI team</p>
+        </div>
+      </div>
+
+      <div class="footer">&copy; 2023 ui. All rights reserved.</div>
+    </div>
+  </body>
+</html>
